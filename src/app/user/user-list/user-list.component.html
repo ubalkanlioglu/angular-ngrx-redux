@@ -1,0 +1,14 @@
+<p>
+  user-list works!
+</p>
+
+
+<div class="row">
+  <div class="col-lg-6">
+    <button class="btn btn-success" (click)='getUsers()'>Fetch</button>
+    <app-user-table [users]='users$ | async' (deleteUser)='deleteUser($event)' ></app-user-table>
+  </div>
+  <div class="col-lg-6">
+    <app-user-list-2></app-user-list-2>
+  </div>
+</div>

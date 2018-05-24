@@ -1,0 +1,12 @@
+
+  <div class="row">
+    <div class="col-6">
+      <ul>
+        <li *ngFor="let candidate of (store.state$ | async).candidates">
+          <span>{{ candidate.name }}</span>
+          <span>Votes: {{ candidate.votes }}</span>
+          <button (click)="store.addVote(candidate)">+</button>
+        </li>
+      </ul>
+    </div>
+  </div>

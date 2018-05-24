@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-4">
+    <ul>
+      <!-- <li *ngFor="let candidate of (store.state$ | async).candidates"> -->
+      <li *ngFor="let candidate of candidates">
+        <span>{{ candidate.name }}</span>
+        <span>Votes: {{ candidate.votes }}</span>
+        <button (click)="store.addVote(candidate)">+</button>
+      </li>
+    </ul>
+  </div>
+  <div class="col-4">
+    <button class="btn btn-success" (click)='onClickLogin()'>Login</button>
+  </div>
+  <div class="col-4">
+      <button class="btn btn-success" (click)='onClickMutate()'>Mutate</button>
+    </div>
+</div>
